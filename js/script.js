@@ -52,5 +52,29 @@ toggleSlide('.catalog-item__back');
 
     });
 
+    $('#feed_form_consu').validate({
+        rules:{
+            name:'required',
+            phone:'required',
+            email: {
+                required: true,
+                email: true
+            }
+
+        },
+        messages:{
+            name:'Пожалуйста, введите имя',
+            maxlength:'Максимальное количиство символов 15',
+            phone:{
+                required: 'Пожалуйста, введите номер',
+                phone:'Неправильно введен номер !',
+                minlength:'Минимум 11 символов'
+            },    
+            email:{
+                 required: 'Пожалуйста, введите email',
+                 email:'Неправильно введен email !'
+            }
+        }
+    });
 
 });

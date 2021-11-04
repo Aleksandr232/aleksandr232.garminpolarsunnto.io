@@ -3,8 +3,8 @@ $(document).ready(function(){
         speed: 1300,
         autoplay: true,
         autoplaySpeed: 1200,
-        prevArrow: '<button type="button" class="slick-prev"><img src="slider/chevron/chevron right solid.png"></button>',
-        nextArrow: '<button type="button" class="slick-next"><img src="slider/chevron/chevron left solid.png"></button>',
+        prevArrow: '<button type="button" class="slick-prev"><img class="right" src="slider/chevron/chevron right solid.png"></button>',
+        nextArrow: '<button type="button" class="slick-next"><img class="left" src="slider/chevron/chevron left solid.png"></button>',
         responsive: [
             {  
                 breakpoint: 768,
@@ -75,6 +75,39 @@ toggleSlide('.catalog-item__back');
                  email:'Неправильно введен email !'
             }
         }
+    });
+
+
+    $('form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type:'POST',
+            URL: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find('input').val('');
+            $('#cosultattion, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn("slow");
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    //smooth scroll and page up
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            ('.pageup').fadeOut();
+        }        
+    });
+
+    $("a[href^='#']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
     });
 
 });

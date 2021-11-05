@@ -2,6 +2,7 @@
 <html lang="ru">
 
 <head>
+    <link rel="shortcut icon" href="icon/garmii.jpg" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -9,9 +10,10 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel='stylesheet' href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
-<link rel="shortcut icon" href="icon/garmii.jpg" type="image/png">
+
 
 <body>
     <section id="up" class="promo">
@@ -24,7 +26,7 @@
                         <span>Garmin, Polar, Suunto</span>
                     </div>
                     <div class="header__contacts">
-                        <a href="tel:+79991625236" class="header__phone">+7 (999) 162-52-36</a>
+                        <a class="header__phone" href="tel:+79991625236" >+7 (999) 162-52-36</a>
                         <button data-modal='consultation'  class="button">заказать звонок</button>
                     </div>
             </header>
@@ -479,12 +481,12 @@
 
     <section  class="reviews">
         <div class="container">
-            <div class="rot">
-                <h2 class="title_reviews">отзывы клиентов</h2>
-                <img src="img/reviews/photo_1.jpg" alt="reviews" class="photo_reviews">
-                <h3 class="reviews_title">Ирина Иванченко</h3>
-                <div class="text_mini">2 полумарафона</div>
-                <div class="reviews_sub">Не знала, что себе купить - обратилась к ребятам из RunSmart -
+            <div class="rot animate__animated animate__fadeInUp wow" data-wow-duration="1s" data-wow-delay="1s">
+                <h2 class="title_reviews ">отзывы клиентов</h2>
+                <img src="img/reviews/photo_1.jpg" alt="reviews" class="photo_reviews ">
+                <h3 class="reviews_title ">Ирина Иванченко</h3>
+                <div class="text_mini ">2 полумарафона</div>
+                <div class="reviews_sub ">Не знала, что себе купить - обратилась к ребятам из RunSmart -
                     подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.<br>Через
                     некоторое
                     время решила обновить гаджет - не раздумывая обратилась туда же.<br><br>Новые цели - новый
@@ -492,19 +494,19 @@
                     Спасибо, RunSmart! </div><br><br>
 
 
-                <img src="img/reviews/photo_2.jpg" alt="reviews" class="photo_reviews">
-                <h3 class="reviews_title">Иван Сёмочкин</h3>
-                <div class="text_mini">1 полумарафон</div>
+                <img src="img/reviews/photo_2.jpg" alt="reviews" class="photo_reviews ">
+                <h3 class="reviews_title ">Иван Сёмочкин</h3>
+                <div class="text_mini ">1 полумарафон</div>
                 <div class="reviews_sub">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже
                     себе делал.<br> Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую
                     тренировку, научили пользоваться новым гаджетом. Также объяснили<br> основы анатомии, составили план
                     тренировок на месяц вперёд.<br><br>С ними подготовился к своему первому полумарафону! Спасибо!!!
                 </div><br><br>
 
-                <img src="img/reviews/photo_3.jpg" alt="reviews" class="photo_reviews">
-                <h3 class="reviews_title">Юлия Дашкина</h3>
-                <div class="text_mini">2 полумарафона</div>
-                <div class="reviews_sub">Долго не могла начать бегать, т.к. до этого несколько раз начинала, но
+                <img src="img/reviews/photo_3.jpg" alt="reviews" class="photo_reviews ">
+                <h3 class="reviews_title ">Юлия Дашкина</h3>
+                <div class="text_mini ">2 полумарафона</div>
+                <div class="reviews_sub ">Долго не могла начать бегать, т.к. до этого несколько раз начинала, но
                     становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила
                     попробовать.<br><br>Позвонила, ребята поинтересовались моими целями и подобрали очень<br> интересный
                     вариант со
@@ -571,10 +573,11 @@
         
      
 
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src='js/wow.min.js'></script>
     <script src='js/script.js'></script>
 </body>
 
